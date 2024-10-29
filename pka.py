@@ -52,11 +52,6 @@ class Materials:
         if 0 < index < self.trail[0]:
             self.part = self.KEYDATA[index]
             print('*active key has been changed...')
-            
-    def export(self):
-        with open('materials/exportkey.dat', 'wb') as exportkeyfile:
-            exportkeyfile.write(self.part.encode())
-        print('*key exported')
         
     def decrypt(self, chipertext):
         # decrypt a chipertext via Picturebytes
